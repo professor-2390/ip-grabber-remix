@@ -1,4 +1,4 @@
-import { Loader } from "@mantine/core";
+import { Loader, Center } from "@mantine/core";
 import type { ActionFunction } from "@remix-run/node";
 import { redirect } from "@remix-run/node";
 import { Form } from "@remix-run/react";
@@ -58,7 +58,9 @@ export default function TrackRoute() {
 
   return (
     <>
-      <Loader />
+      <Center>
+        <Loader color="dark" size="xl" variant="bars" />
+      </Center>
       <Form ref={formRef} method="post" hidden>
         ip: {ip}
         <input name="ip" defaultValue={ip} />

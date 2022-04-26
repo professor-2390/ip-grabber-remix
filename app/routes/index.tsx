@@ -1,4 +1,4 @@
-import { Button, Container, TextInput } from "@mantine/core";
+import { Button, Container, TextInput, Divider } from "@mantine/core";
 import { Form } from "@remix-run/react";
 import type { ActionFunction } from "@remix-run/node";
 import { redirect } from "@remix-run/node";
@@ -42,6 +42,7 @@ export default function Index() {
           Create tracker
         </Button>
       </Form>
+        <Divider my="sm" variant="dashed" />
     </Container>
   );
 }

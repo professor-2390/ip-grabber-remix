@@ -3,7 +3,7 @@ import type { LoaderFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import { db } from "~/utils/db.server";
-import { Button, Table, Container, Anchor } from "@mantine/core";
+import { Button, Table, Container, Anchor, Divider } from "@mantine/core";
 import { useClipboard } from "@mantine/hooks";
 
 type LoaderData = {
@@ -54,10 +54,11 @@ export default function TrackRoute() {
 
   return (
     <div>
-    <Anchor href="/">
-      Return Home
-    </Anchor>
       <Container>
+        <Anchor href="/" color="red" size="xl">
+          Return Home
+        </Anchor>
+        <Divider my="sm" variant="dashed" />
         <Table verticalSpacing="sm" fontSize="md">
           <thead>
             <tr>
